@@ -1,38 +1,279 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./styles/fonts/FontsFree-Net-Montserrat-Medium.ttf')
+}
+@font-face {
+  font-family: 'Samsung';
+  src: url('./styles/fonts/SamsungSharpSansRegular-Regular.ttf')
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  font-family: 'Montserrat';
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
 .App {
-  text-align: center;
+  height: 100vh;
+  width: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+body {
+  background: linear-gradient(to right, #e6dfdf, #ffffff, #dedde2);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+
+.navContainer {
+ background-color: #f4f4f4;;
+  color: black !important;
+  display: flex;
+  align-items: center;
+  min-height: 10%;
+  padding: 20px 50px 0px 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.navContainer nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  font-size: 20px;
+  gap: 30px;
+  font-weight: 600;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.tab {
+  color: black;
+  text-transform: uppercase;
+}
+
+.cart,
+.searchBtn,
+.submitSearch {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+
+.tab:first-child {
+  margin-right: auto;
+}
+
+.searchBtn {
+  margin-left: auto;
+}
+
+
+.searchBtn img {
+  filter: invert(1);
+}
+
+
+.home-div {
+  background-color: #f4f4f4;
+  height: 90vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.home {
+  height: 674px;
+  width: 1024px;
+  background-image: url('./styles/images/galaxy-z-fold4_highlights_kv.jpg');
+}
+
+.home-title  {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  transform: translateX(-600px) translateY(100px);
+}
+
+.home-title h1 {
+  font-size: 5.5em;
+  font-family: 'Samsung';
+}
+
+.home-title p {
+  font-size: 1.3em;
+}
+
+
+.home-title button {
+    margin-top: 30px;
+    padding: 15px 20px;
+    background-color: rgb(0 0 0);
+    font-size: 1.5em;
+    border: none;
+    align-self: flex-start;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.home-title a {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.inputDiv  {
+  position: fixed;
+  top: 0;
+  left: 0;
+  flex-direction: row-reverse;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.884);
+  z-index: 33;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.inputDiv.show {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.inputDiv input {
+  font-size: 3em;
+  padding: 0px 60px 0px 10px;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: transparent;
+  color: white;
+}
+
+.inputDiv input:focus {
+  outline: none;
+}
+
+.submitSearch img {
+  height: 50px;
+}
+
+.submitSearch {
+  transform: translateX(-50px);
+}
+
+
+.closeInput {
+  position: absolute;
+  top: 5%;
+  right: 20%;
+  background-color: transparent;
+  border: none;
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.closeInput img {
+  height: 40px;
+}
+
+
+.cartDiv {
+  width: 30%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #f4f4f4;
+  display: none;
+}
+
+.cartDiv.show {
+  display: flex;
+}
+
+.closeCart {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.closeCart img {
+  height: 40px;
+}
+
+
+
+
+
+
+
+
+.shopDiv {
+  display: flex;
+  min-height: 90%;
+  width: 100%;
+  background-color: #f4f4f4;
+}
+
+.sidebar {
+  width: 25%;
+  border-right: 1px solid red;
+  padding: 70px 5%;
+}
+
+.sidebar ul {
+  margin-top: 100px;
+}
+
+.sidebar li {
+  display: flex;
+  margin-top: 10px;
+  align-items: center;
+  gap: 25px;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.sidebar li:hover {
+  color: darkgray;
+}
+
+.mainpage {
+  width: 75%;
+  display: grid;
+  grid-template-columns: repeat(3, 400px);
+  grid-template-rows: 450px;
+  padding: 100px;
+  gap: 20px;
+}
+
+.fold {
+  text-align: center;
+  font-size: 1.4em;
+}
+
+.fold:hover {
+  background-color: #333399;
+  color: white;
+}
+
+.fold img {
+
+  width: 320px;
 }

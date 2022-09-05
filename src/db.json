@@ -1,0 +1,43 @@
+ [
+  {
+      "name":"Huawei Mate Xs",
+      "src": "./src/utilities/products/huawei_mate_xs.png"
+  },
+  {
+    "name":"Mercedez-Benz",
+    "src":"Merz"
+  },
+  {
+    "name":"Audi",
+    "src":"Audi"
+  },
+  {
+    "name":"Citroen",
+    "src":"Citr"
+  },
+  {
+    "name":"Chevrolet",
+    "src":"Chev"
+  },
+  {
+    "name":"Nissan",
+    "src":"Niss"
+  },
+  {
+    "name":"Subaru",
+    "src":"Suba"
+  },
+  {
+    "name":"Toyota",
+    "src":"Toyt"
+  },
+  {
+    "name":"Peugeot",
+    "src":"Peug"
+   },
+   {
+    "name":"Lotus",
+    "src":"Lotu"
+   }
+]
+}
