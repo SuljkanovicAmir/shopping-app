@@ -1,4 +1,5 @@
- [
+{ 
+  "products": [
   {
       "name":"Huawei Mate Xs",
       "src": "./src/utilities/products/huawei_mate_xs.png"
@@ -40,3 +41,4 @@
     "src":"Lotu"
    }
 ]
+}

@@ -3,14 +3,19 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import Fold from '../styles/images/banner_galaxy-z-fold4.png'
 
+const headers = {
+  "Content-Type": "application/json",
+};
+const url = "https://my-json-server.typicode.com/SuljkanovicAmir/shopping-app";
+
+
 function Shop() {
   const [products, setProducts] = useState([]);
 
-
   useEffect(()=>{
-    axios.get('.../db.json')
+    axios.get(url, {headers})
     .then(response => {
-        console.log(response.data)
+        console.log(response)
         setProducts(response.data)
     })
     .catch(err => {
