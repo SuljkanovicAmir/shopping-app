@@ -233,7 +233,6 @@ nav ul {
 
 .sidebar {
   width: 25%;
-  border-right: 1px solid red;
   padding: 70px 5%;
 }
 
@@ -258,22 +257,27 @@ nav ul {
   width: 75%;
   display: grid;
   grid-template-columns: repeat(3, 400px);
-  grid-template-rows: 450px;
+  grid-template-rows: repeat(5, 450px);
   padding: 100px;
-  gap: 20px;
 }
 
-.fold {
+.products {
   text-align: center;
   font-size: 1.4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  cursor: pointer;
 }
 
-.fold:hover {
+.products:hover {
   background-color: #333399;
   color: white;
 }
 
-.fold img {
+.products img {
 
-  width: 320px;
+  height: 240px;
 }

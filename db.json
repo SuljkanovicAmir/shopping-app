@@ -11,7 +11,7 @@
     "price": "719.00"
   },
   {
-    "name":"SSamsung Galaxy S22 Ultra",
+    "name":"Samsung Galaxy S22 Ultra",
     "src":"../images/samsungs22ultra.png",
     "price": "809.00"
   },  
@@ -57,7 +57,7 @@
   },
   {
     "name":"Samsung Galaxy A53",
-    "src":"../images/samsung53.png",
+    "src":"../images/samsunga53.png",
     "price": "315,00"
    },
    {

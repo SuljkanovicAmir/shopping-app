@@ -41,9 +41,10 @@ console.log(products.map(product => product.name))
       </div>
       <div className='mainpage'>
           {products.map(product => (
-            <div className='fold'>
-              <img src={product.src} alt='fold'/>
+            <div className='products'>
+              <img src={product.src} alt='phone'/>
               <figcaption>{product.name}</figcaption>
+              <p>${product.price}</p>
           </div>
           ))}
           
