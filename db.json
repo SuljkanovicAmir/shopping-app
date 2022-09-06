@@ -2,11 +2,11 @@
   "products": [
   {
       "name":"Huawei Mate Xs",
-      "src": "./src/utilities/products/huawei_mate_xs.png"
+      "src": "../src/utilities/products/huawei_mate_xs.png"
   },
   {
-    "name":"Mercedez-Benz",
-    "src":"Merz"
+    "name":"Huawei 12 Pro",
+    "src":"../images/xaomi12pro.png"
   },
   {
     "name":"Audi",

@@ -5,8 +5,9 @@ import Fold from '../styles/images/banner_galaxy-z-fold4.png'
 
 const headers = {
   "Content-Type": "application/json",
+  'Access-Control-Allow-Origin': '*',
 };
-const url = "https://my-json-server.typicode.com/SuljkanovicAmir/shopping-app";
+const url = "https://my-json-server.typicode.com/SuljkanovicAmir/shopping-app/db/";
 
 
 function Shop() {
@@ -15,14 +16,16 @@ function Shop() {
   useEffect(()=>{
     axios.get(url, {headers})
     .then(response => {
-        console.log(response)
-        setProducts(response.data)
+        console.log(response.data.products)
+        setProducts(response.data.products)
+       
     })
     .catch(err => {
       console.log(err)
     })
-})
+},[])
 
+console.log(products.map(product => product.name))
   return (
     <div className='shopDiv'>
       <div className='sidebar'>
@@ -37,42 +40,13 @@ function Shop() {
         </ul>
       </div>
       <div className='mainpage'>
-          <div className='fold'>
-            <img src={Fold} alt='fold'/>
-            <figcaption>Samsung Galaxy S22</figcaption>
+          {products.map(product => (
+            <div className='fold'>
+              <img src={product.src} alt='fold'/>
+              <figcaption>{product.name}</figcaption>
           </div>
-          <div className='fold'>
-            <img src={Fold} alt='fold'/>
-            <figcaption>Samsung Galaxy S22</figcaption>
-          </div>
-          <div className='fold'>
-            <img src={Fold} alt='fold'/>
-            <figcaption>Samsung Galaxy S22</figcaption>
-          </div>
-          <div className='fold'>
-            <img src={Fold} alt='fold'/>
-            <figcaption>Samsung Galaxy S22</figcaption>
-          </div>
-          <div className='fold'>
-            <img src={Fold} alt='fold'/>
-            <figcaption>Samsung Galaxy S22</figcaption>
-          </div>
-          <div className='fold'>
-            <img src={Fold} alt='fold'/>
-            <figcaption>Samsung Galaxy S22</figcaption>
-          </div>
-          <div className='fold'>
-            <img src={Fold} alt='fold'/>
-            <figcaption>Samsung Galaxy S22</figcaption>
-          </div>
-          <div className='fold'>
-            <img src={Fold} alt='fold'/>
-            <figcaption>Samsung Galaxy S22</figcaption>
-          </div>
-          <div className='fold'>
-            <img src={Fold} alt='fold'/>
-            <figcaption>Samsung Galaxy S22</figcaption>
-          </div>
+          ))}
+          
       </div>
     </div>
   )
