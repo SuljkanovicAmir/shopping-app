@@ -1,44 +1,69 @@
 { 
   "products": [
   {
-      "name":"Huawei Mate Xs",
-      "src": "../src/utilities/products/huawei_mate_xs.png"
+    "name":"Samsung Galaxy Z Flip 4",
+    "src":"../images/samsungflip4.png",
+    "price": "899.00"
   },
   {
-    "name":"Huawei 12 Pro",
-    "src":"../images/xaomi12pro.png"
+    "name":"Samsung Galaxy S22",
+    "src":"../images/samsungs22.png",
+    "price": "719.00"
   },
   {
-    "name":"Audi",
-    "src":"Audi"
+    "name":"SSamsung Galaxy S22 Ultra",
+    "src":"../images/samsungs22ultra.png",
+    "price": "809.00"
+  },  
+  {
+    "name":"Huawei Mate Xs",
+    "src": "../images/huawei_mate_xs.png",
+    "price": "3,031.00"
   },
   {
-    "name":"Citroen",
-    "src":"Citr"
+    "name":"Xiaomi 12 Pro",
+    "src":"../images/xaomi12pro.png",
+    "price": "630.00"
   },
   {
-    "name":"Chevrolet",
-    "src":"Chev"
+    "name":"Huawei Mate 40 Pro",
+    "src":"../images/xaomi12pro.png",
+    "price": "1100,00"
   },
   {
-    "name":"Nissan",
-    "src":"Niss"
+    "name":"Huawei P50",
+    "src":"../images/Huawei_P50_Pro_Golden_Black_579x1080-px.png",
+    "price": "643,00"
   },
   {
-    "name":"Subaru",
-    "src":"Suba"
+    "name":"Iphone 11",
+    "src":"../images/iphone11.png",
+    "price": "520,00"
   },
   {
-    "name":"Toyota",
-    "src":"Toyt"
+    "name":"Iphone 13",
+    "src":"../images/iphone13.png",
+    "price": "720,00"
   },
   {
-    "name":"Peugeot",
-    "src":"Peug"
+    "name":"Huawei P50 Pocket",
+    "src":"../images/p50pocket.png",
+    "price": "1295,00"
+  },
+  {
+    "name":"Redmi Note 11",
+    "src":"../images/Redmi_Note11.png",
+    "price": "207,00"
+  },
+  {
+    "name":"Samsung Galaxy A53",
+    "src":"../images/samsung53.png",
+    "price": "315,00"
    },
    {
-    "name":"Lotus",
-    "src":"Lotu"
+    "name":"Xiaomi 12",
+    "src":"../images/xaomi12.png",
+    "price": "540.00"
    }
 ]
 }
