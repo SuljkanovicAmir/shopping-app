@@ -1,20 +1,71 @@
+import { useState, useEffect } from 'react';
+import axios from 'axios'
 import './App.css';
 import Nav from './components/Nav'
 import Shop from './components/Shop'
 import Home from './components/Home'
-
-
 import {Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 
+const headers = {
+  "Content-Type": "application/json",
+  'Access-Control-Allow-Origin': '*',
+};
+const url = "https://my-json-server.typicode.com/SuljkanovicAmir/shopping-app/db/";
+
+
+
 function App() {
+  const [products, setProducts] = useState([]);
+  const [count, setCount] = useState(0)
+  const [basketArr, setItemsInBag] = useState([])
+
+
+  useEffect(()=>{
+    axios.get(url, {headers})
+    .then(response => {
+        setProducts(response.data.products)
+       
+    })
+    .catch(err => {
+      console.log(err)
+    })
+},[])
+
+  const handleItem = (itemName) => {
+    setItemsInBag(prevArr => [...prevArr, itemName])
+  }
+
+  const handleBag = (itemName) => {
+    if(!basketArr.includes(itemName)) {
+      handleItem(itemName)
+      handleCount()
+    } else {
+        return
+      }
+  }
+
+  console.log(basketArr)
+
+
+
+function handleCount () {
+  setCount(prevValue => prevValue + 1)
+}
+
+function handleAddingMoreItems(itemName) {
+    handleCount()
+    handleItem(itemName)
+}
+
+console.log(count)
   return (
     <div className="App">
       <Router>
-        <Nav />
+        <Nav count={count} items={basketArr} handleAddingMoreItems={handleAddingMoreItems} />
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/home" element={<Home />}/>
-          <Route path="/shop" element={<Shop />}/>
+          <Route path="/shop" element={<Shop handleCount={handleCount} handleBag={handleBag} products={products}/>}/>
         </Routes>
       </Router>
       

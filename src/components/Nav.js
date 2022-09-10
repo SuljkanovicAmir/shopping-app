@@ -5,7 +5,7 @@ import Cart from '../styles/images/cart.png'
 import SearchBtn from '../styles/images/search.svg'
 import CloseBtn from '../styles/images/close.svg'
 
-function Nav() {
+function Nav({count, items, handleAddingMoreItems}) {
 
   const [isActive, setIsActive] = useState(false);
   const [isCartActive, setCartActive] = useState(false);
@@ -18,19 +18,22 @@ function Nav() {
     setCartActive(current => !current);
   };
 
+  console.log(items)
+
   return (
     <div  className="navContainer">
-         <nav>
-            <ul className={isActive ? 'ul-nav show' : 'ul-nav'}>
-                <NavLink activeclassname="active" className={"tab"} to="/home">MobileStore</NavLink>
-                <NavLink activeclassname="active" className={"tab"} to="/shop">Shop</NavLink>
-                <button  className={isActive ? 'searchBtn show' : 'searchBtn'} onClick={handleClick}>
-                    <img src={SearchBtn} alt='search'/>
-                </button>
-                <button  className="cart" onClick={handleCart}>
-                    <img src={Cart} alt='cart menu' />
-                </button>
-            </ul>
+        <nav>
+          <ul className={isActive ? 'ul-nav show' : 'ul-nav'}>
+            <NavLink activeclassname="active" className={"tab"} to="/home">MobileStore</NavLink>
+            <NavLink activeclassname="active" className={"tab"} to="/shop">Shop</NavLink>
+            <button  className={isActive ? 'searchBtn show' : 'searchBtn'} onClick={handleClick}>
+              <img src={SearchBtn} alt='search'/>
+            </button>
+            <button  className="cart" onClick={handleCart}>
+            <span>{count}</span>
+              <img src={Cart} alt='cart menu' />
+            </button>
+          </ul>
         </nav>
         <div className={isActive ? 'inputDiv show' : 'inputDiv'}>
           <button  className="closeInput" onClick={handleClick}>
@@ -41,11 +44,27 @@ function Nav() {
           </button>
           <input type={'text'} maxLength="25" placeholder='Search products'/>
         </div>
-        <div className={isCartActive ? 'cartDiv show' : 'cartDiv'}>
-          <button  className="closeCart" onClick={handleCart}>
-             <img src={CloseBtn} alt='cart menu' />
-          </button>
-          
+        <div className={isCartActive ? 'cartBackdrop' : ''}>
+          <div className={isCartActive ? 'cartDiv show' : 'cartDiv'}>
+            <button  className="closeCart" onClick={handleCart}>
+              <img src={CloseBtn} alt='cart menu' />
+            </button>
+            <h1>Your Shopping <br></br>Cart</h1>
+            {items.map((product, index) => (
+            <div className='itemsInBasket' key={index + 1} id={index + 1}>
+              <img src={product.src} alt='phone'/>
+              <div className='itemsDescription'>
+                <figcaption>{product.name}</figcaption>
+                <p>${product.price}</p>
+                <div> 
+                  <button>-</button>
+                  <p>1</p>
+                  <button onClick={e => handleAddingMoreItems(product)}>+</button>
+                </div>
+              </div>
+          </div>
+          ))}
+          </div>
         </div>
     </div>
   )
