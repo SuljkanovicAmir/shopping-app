@@ -207,6 +207,7 @@ nav ul {
   color: white;
   padding: 30px 30px;
   min-width: 420px;
+  overflow: auto;
 }
 
 .cartDiv > h1 {
