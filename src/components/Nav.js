@@ -5,7 +5,7 @@ import Cart from '../styles/images/cart.png'
 import SearchBtn from '../styles/images/search.svg'
 import CloseBtn from '../styles/images/close.svg'
 
-function Nav({count, items, handleAddingMoreItems}) {
+function Nav({count, items, handleItemCount}) {
 
   const [isActive, setIsActive] = useState(false);
   const [isCartActive, setCartActive] = useState(false);
@@ -17,7 +17,8 @@ function Nav({count, items, handleAddingMoreItems}) {
   const handleCart = event => {
     setCartActive(current => !current);
   };
-
+  
+  
   console.log(items)
 
   return (
@@ -57,9 +58,9 @@ function Nav({count, items, handleAddingMoreItems}) {
                 <figcaption>{product.name}</figcaption>
                 <p>${product.price}</p>
                 <div> 
-                  <button>-</button>
-                  <p>1</p>
-                  <button onClick={e => handleAddingMoreItems(product)}>+</button>
+                  <button onClick={() => handleItemCount(product, -1)}>-</button>
+                  <p>{product.amount}</p>
+                  <button onClick={() => handleItemCount(product, 1)}>+</button>
                 </div>
               </div>
           </div>

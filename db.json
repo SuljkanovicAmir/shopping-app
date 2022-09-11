@@ -4,79 +4,92 @@
     "id": 1,
     "name":"Samsung Galaxy Z Flip 4",
     "src":"../images/samsungflip4.png",
-    "price": 899.00
+    "price": 899.00,
+    "quantity": 1
   },
   {
     "id": 2,
     "name":"Samsung Galaxy S22",
     "src":"../images/samsungs22.png",
-    "price": 719.00
+    "price": 719.00,
+    "quantity": 1
   },
   {
     "id": 3,
     "name":"Samsung Galaxy S22 Ultra",
     "src":"../images/samsungs22ultra.png",
-    "price": 809.00
+    "price": 809.00,
+    "quantity": 1
   },  
   {
     "id": 4,
     "name":"Huawei Mate Xs",
     "src": "../images/huawei_mate_xs.png",
-    "price": 3031.99
+    "price": 3031.99,
+    "quantity": 1
   },
   {
     "id": 5,
     "name":"Xiaomi 12 Pro",
     "src":"../images/xaomi12pro.png",
-    "price": 630.00
+    "price": 630.00,
+    "quantity": 1
   },
   {
     "id": 6,
     "name":"Huawei Mate 40 Pro",
     "src":"../images/xaomi12pro.png",
-    "price": 1100.99
+    "price": 1100.99,
+    "quantity": 1
   },
   {
     "id": 7,
     "name":"Huawei P50",
     "src":"../images/Huawei_P50_Pro_Golden_Black_579x1080-px.png",
-    "price": 643.00
+    "price": 643.00,
+    "quantity": 1
   },
   {
     "id": 8,
     "name":"Iphone 11",
     "src":"../images/iphone11.png",
-    "price": 520.00
+    "price": 520.00,
+    "quantity": 1
   },
   {
     "id": 9,
     "name":"Iphone 13",
     "src":"../images/iphone13.png",
-    "price": 720.00
+    "price": 720.00,
+    "quantity": 1
   },
   {
     "id": 10,
     "name":"Huawei P50 Pocket",
     "src":"../images/p50pocket.png",
-    "price": 1295.00
+    "price": 1295.00,
+    "quantity": 1
   },
   {
     "id": 11,
     "name":"Redmi Note 11",
     "src":"../images/Redmi_Note11.png",
-    "price": 207.00
+    "price": 207.00,
+    "quantity": 1
   },
   {
     "id": 12,
     "name":"Samsung Galaxy A53",
     "src":"../images/samsunga53.png",
-    "price": 315.00
+    "price": 315.00,
+    "quantity": 1
    },
    {
     "id": 13,
     "name":"Xiaomi 12",
     "src":"../images/xaomi12.png",
-    "price": 540.99
+    "price": 540.99,
+    "quantity": 1
    }
 ]
 }

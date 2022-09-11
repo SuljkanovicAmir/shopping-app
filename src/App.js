@@ -18,13 +18,13 @@ function App() {
   const [products, setProducts] = useState([]);
   const [count, setCount] = useState(0)
   const [basketArr, setItemsInBag] = useState([])
+  const [itemCount, setItemCount] = useState(1)
 
 
   useEffect(()=>{
     axios.get(url, {headers})
     .then(response => {
         setProducts(response.data.products)
-       
     })
     .catch(err => {
       console.log(err)
@@ -33,6 +33,7 @@ function App() {
 
   const handleItem = (itemName) => {
     setItemsInBag(prevArr => [...prevArr, itemName])
+    
   }
 
   const handleBag = (itemName) => {
@@ -44,24 +45,26 @@ function App() {
       }
   }
 
-  console.log(basketArr)
+  const handleItemCount = (item, d) => {
+    const ind = basketArr.indexOf(item);
+    const arr = basketArr;
+    arr[ind].amount += d;
 
+    if(arr[ind].amount === 0) arr[ind].amount = 1;
+    setItemsInBag([...arr])
+  }
 
 
 function handleCount () {
   setCount(prevValue => prevValue + 1)
 }
 
-function handleAddingMoreItems(itemName) {
-    handleCount()
-    handleItem(itemName)
-}
 
 console.log(count)
   return (
     <div className="App">
       <Router>
-        <Nav count={count} items={basketArr} handleAddingMoreItems={handleAddingMoreItems} />
+        <Nav count={count} items={basketArr}  handleItemCount={handleItemCount} />
         <Routes>
           <Route path="/" element={<Home />}/>
           <Route path="/home" element={<Home />}/>
