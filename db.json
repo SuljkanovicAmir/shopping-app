@@ -2,6 +2,7 @@
   "products": [
   {
     "id": 1,
+    "brand":"Samsung",
     "name":"Samsung Galaxy Z Flip 4",
     "src":"../images/samsungflip4.png",
     "price": 899.00,
@@ -9,6 +10,7 @@
   },
   {
     "id": 2,
+    "brand":"Samsung",
     "name":"Samsung Galaxy S22",
     "src":"../images/samsungs22.png",
     "price": 719.00,
@@ -16,6 +18,7 @@
   },
   {
     "id": 3,
+    "brand":"Samsung",
     "name":"Samsung Galaxy S22 Ultra",
     "src":"../images/samsungs22ultra.png",
     "price": 809.00,
@@ -23,6 +26,7 @@
   },  
   {
     "id": 4,
+    "brand":"Huawei",
     "name":"Huawei Mate Xs",
     "src": "../images/huawei_mate_xs.png",
     "price": 3031.99,
@@ -30,6 +34,7 @@
   },
   {
     "id": 5,
+    "brand":"Xiaomi",
     "name":"Xiaomi 12 Pro",
     "src":"../images/xaomi12pro.png",
     "price": 630.00,
@@ -37,13 +42,15 @@
   },
   {
     "id": 6,
+    "brand":"Huawei",
     "name":"Huawei Mate 40 Pro",
-    "src":"../images/xaomi12pro.png",
+    "src":"../images/huawei_mate40pro.png",
     "price": 1100.99,
     "quantity": 1
   },
   {
     "id": 7,
+    "brand":"Huawei",
     "name":"Huawei P50",
     "src":"../images/Huawei_P50_Pro_Golden_Black_579x1080-px.png",
     "price": 643.00,
@@ -51,6 +58,7 @@
   },
   {
     "id": 8,
+    "brand":"Iphone",
     "name":"Iphone 11",
     "src":"../images/iphone11.png",
     "price": 520.00,
@@ -58,6 +66,7 @@
   },
   {
     "id": 9,
+    "brand":"Iphone",
     "name":"Iphone 13",
     "src":"../images/iphone13.png",
     "price": 720.00,
@@ -65,6 +74,7 @@
   },
   {
     "id": 10,
+    "brand":"Huawei",
     "name":"Huawei P50 Pocket",
     "src":"../images/p50pocket.png",
     "price": 1295.00,
@@ -72,6 +82,7 @@
   },
   {
     "id": 11,
+    "brand":"Xiaomi",
     "name":"Redmi Note 11",
     "src":"../images/Redmi_Note11.png",
     "price": 207.00,
@@ -79,6 +90,7 @@
   },
   {
     "id": 12,
+    "brand":"Samsung",
     "name":"Samsung Galaxy A53",
     "src":"../images/samsunga53.png",
     "price": 315.00,
@@ -86,6 +98,7 @@
    },
    {
     "id": 13,
+    "brand":"Xiaomi",
     "name":"Xiaomi 12",
     "src":"../images/xaomi12.png",
     "price": 540.99,
