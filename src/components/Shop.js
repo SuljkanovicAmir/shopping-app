@@ -1,33 +1,40 @@
 import React from 'react'
+import { NavLink,Outlet} from "react-router-dom";
 
 
 
-function Shop({ handleCount, products, handleBag }) {
+
+
+const sortOptions = ["name", "price"]
+
+
+function Shop({ handleSort, handleReset }) {
+
 
   return (
     <div className='shopDiv'>
       <div className='sidebar'>
         <h1>Shop</h1>
         <ul>
-          <li>All products</li>
-          <li>Samsung</li>
-          <li>Apple</li>
-          <li>Xiaomi</li>
-          <li>Huawei</li>
-        </ul>
+        <NavLink to="/shop"><li className='sidebarList'>All products</li></NavLink>
+        <NavLink to="/shop/samsung"><li className='sidebarList'>Samsung</li></NavLink>
+        <NavLink to="/shop/apple"><li className='sidebarList'>Apple</li></NavLink>
+        <NavLink to="/shop/xiaomi"><li className='sidebarList'>Xiaomi</li></NavLink>
+        <NavLink to="/shop/huawei"><li className='sidebarList'>Huawei</li></NavLink>
+        <div className='selection'>
+            <h1>Sort by</h1>
+            <div>
+              {sortOptions.map ((item, index) => (
+                <li className='sortList' key={index}> <button onClick={handleSort} value={item} >{item}</button></li>
+              ))}
+            </div>
+        </div>
+        <NavLink to="/shop"><button className='resetBtn' onClick={handleReset}>Reset Filters</button></NavLink>
+      </ul>
       </div>
-      <div className='mainpage'>
-          {products.map((product, index) => (
-            <div className='products' key={index + 1} id={index + 1}>
-              <img src={product.src} alt='phone'/>
-              <figcaption>{product.name}</figcaption>
-              <p>${product.price}</p>
-              <button onClick={e => handleBag(product)}>Add to cart</button>
-          </div>
-          ))}
-      </div>
+      <Outlet />
+     
     </div>
-  )
-}
+)}
 
 export default Shop
