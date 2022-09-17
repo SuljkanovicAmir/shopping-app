@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/shopping-app/static/css/main.32046577.css",
+    "main.js": "/shopping-app/static/js/main.8efd321c.js",
+    "static/media/FontsFree-Net-Montserrat-Medium.ttf": "/shopping-app/static/media/FontsFree-Net-Montserrat-Medium.c186643a46afb123cf6a.ttf",
+    "static/media/SamsungSharpSansRegular-Regular.ttf": "/shopping-app/static/media/SamsungSharpSansRegular-Regular.498aa689b3462cc719e1.ttf",
+    "static/media/mobile_background.jpg": "/shopping-app/static/media/mobile_background.aab9b3539d71427af251.jpg",
+    "static/media/galaxy-z-fold4_highlights_kv.jpg": "/shopping-app/static/media/galaxy-z-fold4_highlights_kv.47278bef5d2703aaccdc.jpg",
+    "index.html": "/shopping-app/index.html",
+    "static/media/search.svg": "/shopping-app/static/media/search.f0a473f9db26e5bef5a43effc4bc6fdd.svg",
+    "static/media/close.svg": "/shopping-app/static/media/close.745063d25d8995a5d5c582e48c97dc84.svg",
+    "main.32046577.css.map": "/shopping-app/static/css/main.32046577.css.map",
+    "main.8efd321c.js.map": "/shopping-app/static/js/main.8efd321c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.32046577.css",
+    "static/js/main.8efd321c.js"
+  ]
+}
