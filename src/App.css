@@ -1,10 +1,12 @@
 @font-face {
   font-family: 'Montserrat';
-  src: url('./styles/fonts/FontsFree-Net-Montserrat-Medium.ttf')
+  src: url('./styles/fonts/FontsFree-Net-Montserrat-Medium.ttf');
+  font-display: swap;
 }
 @font-face {
   font-family: 'Samsung';
-  src: url('./styles/fonts/SamsungSharpSansRegular-Regular.ttf')
+  src: url('./styles/fonts/SamsungSharpSansRegular-Regular.ttf');
+  font-display: swap;
 }
 
 
@@ -24,6 +26,7 @@
 .App {
   height: 100vh;
   width: 100%;
+  background-color: #f4f4f4;
 }
 
 
@@ -32,6 +35,13 @@ body {
   background: linear-gradient(to right, #e6dfdf, #ffffff, #dedde2);
 }
 
+
+/*_____________________
+
+
+      Navigation
+
+______________________*/
 
 
 .navContainer {
@@ -94,6 +104,17 @@ nav ul {
 }
 
 
+/*_____________________
+
+
+      Home-div
+
+______________________*/
+
+
+
+
+
 .home-div {
   background-color: #f4f4f4;
   height: 90vh;
@@ -111,7 +132,7 @@ nav ul {
 .home-title  {
   display: flex;
   flex-direction: column;
-  transform: translateX(-600px) translateY(100px);
+  transform: translateX(-600px) translateY(100px) ;
 }
 
 .home-title h1 {
@@ -140,6 +161,20 @@ nav ul {
 }
 
 
+
+
+
+
+
+/*_____________________
+
+
+      Search input
+
+______________________*/
+
+
+
 .inputDiv  {
   position: fixed;
   top: 0;
@@ -149,12 +184,16 @@ nav ul {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.884);
   z-index: 33;
-  display: none;
   justify-content: center;
   align-items: center;
+  backdrop-filter: blur(10px);
+  transition: all .5s cubic-bezier(.65,.05,.36,1);
+  transform: translateY(150%);
+  display: flex;
 }
 .inputDiv.show {
-  display: flex;
+  transition: all .5s cubic-bezier(.65,.05,.36,1);
+  transform: translate(0px);
 }
 
 .inputDiv input {
@@ -166,6 +205,10 @@ nav ul {
   border-right: none;
   background: transparent;
   color: white;
+}
+.inputDiv form {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .inputDiv input:focus {
@@ -197,6 +240,19 @@ nav ul {
 
 
 
+
+
+
+/*_____________________
+
+
+      Cart-div
+
+______________________*/
+
+
+
+
 .cartDiv {
   display: flex;
   flex-direction: column;
@@ -216,15 +272,12 @@ nav ul {
 }
 
 .cartDiv.show {
- 
   transform: translate(0px);
   transition: all .7s cubic-bezier(.65,.05,.36,1);
 }
 .cartDiv > h1 {
   margin-bottom: 50px;
 }
-
-
 
 .cartBackdrop {
   position: fixed;
@@ -243,7 +296,6 @@ nav ul {
   opacity: 0;
 }
 
-
 .closeCart {
   position: absolute;
   top: 4%;
@@ -259,6 +311,12 @@ nav ul {
 
 
 
+/*_____________________
+
+
+      Shop-div
+
+______________________*/
 
 
 
@@ -313,6 +371,7 @@ nav ul {
 }
 
 
+
 .mainpage {
   min-width: 80%;
   display: grid;
@@ -336,7 +395,7 @@ nav ul {
 .products:hover {
   background-color: #333399;
   color: white;
-  transition: all 0.7s ease-out;
+  transition: all 0.4s ease-out;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
@@ -380,6 +439,7 @@ nav ul {
 }
 
 
+
 .cartImgDiv {
   display: flex;
   min-width: 160px;
@@ -406,8 +466,8 @@ nav ul {
 }
 
 .itemsDescription button {
-  height: 40px;
-  width: 40px;
+  height: 30px;
+  width: 30px;
   background-color: black;
   border: none;
   border-radius: 5px;
@@ -417,6 +477,14 @@ nav ul {
   cursor: pointer;
 }
 
+.trashBtn {
+  background-color: white !important;
+  margin-left: auto;
+}
+
+.trashBtn img {
+  height: 30px;
+}
 
 
 .checkout {
@@ -469,7 +537,6 @@ nav ul {
   margin-bottom: 40px;
 }
 
-
 .addedToCart {
   background-color: black;
 }
@@ -512,20 +579,20 @@ nav ul {
 
 .sortList::after {
   content: "";
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    right: 0;
-    background: #3a3938;
-    transition: transform 1s cubic-bezier(.23,1,.32,1);
-    transform-origin: 0 50%;
-    transform: scaleX(0);
-    bottom: -2px;
-    height: 5px;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  background: #3a3938;
+  transition: transform 1s cubic-bezier(.23,1,.32,1);
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  bottom: -2px;
+  height: 5px;
 }
 
 .resetBtn {
-  width: 80%;
+  width: 100%;
   margin-top: 50px;
   font-size: 1.3em;
   padding: 7px 7px;
@@ -533,3 +600,11 @@ nav ul {
   background-color: black;
   cursor: pointer;
 }
+
+.filters {
+  display: none;
+}
+.closeFilters {
+  display: none;
+}
+

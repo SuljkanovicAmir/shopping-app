@@ -12,10 +12,10 @@ function Nav({items, handleItemCount, isCartActive, handleCart, setCart, setValu
 const [isActive, setIsActive] = useState(false);
 
 
-
 const handleClick = event => {
     setIsActive(current => !current);
 };
+
 
   return (
     <div  className="navContainer">

@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from "react";
 import CloseBtn from '../styles/images/close.svg'
+import TrashBtn from '../styles/images/trash.svg'
+import { NavLink } from "react-router-dom";
 
 
 function Cart({items, handleItemCount, isCartActive, handleCart, setCart}) {
@@ -45,16 +47,17 @@ function Cart({items, handleItemCount, isCartActive, handleCart, setCart}) {
             <button onClick={() => handleItemCount(product, -1)}>-</button>
             <p>{product.quantity}</p>
             <button onClick={() => handleItemCount(product, 1)}>+</button>
-            <button onClick={() => handleRemove(product.id)}>D</button>
+            <button className='trashBtn' onClick={() => handleRemove(product.id)}><img className='trashImg' src={TrashBtn} alt='trashcan'/></button>
           </div>
         </div>
       </div>
     ))}
     <div className="totalPrice">Subtotal: ${price}</div>
-    <a href="as" className='checkout'><div>Checkout</div></a>
+    <NavLink to="/home" onClick={handleCart}><a href="as" className='checkout'><div>Checkout</div></a></NavLink>
     </div>
     </>
   )
 }
 
 export default Cart
+
